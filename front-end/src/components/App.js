@@ -1,22 +1,20 @@
 import React from "react";
 import { createBrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./Home"
-import NavBar from "./NavBar";
+import NaviBar from "./NavBar";
 import NewRecipe from "./NewRecipe";
 
 function App() {
   return (
     <div className="App">
       <h1>HELLO WORLD!</h1>
-      <NavBar />
+      <NaviBar />
       <main>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/new-recipes' element={<NewRecipe />}/>
+          <Route path='/new-recipe' element={<NewRecipe />}/>
         </Routes>
       </main>
-      {/* <Home /> */}
-      {/* make a header */}
     </div>
   );
 }
