@@ -1,38 +1,50 @@
 // create header with links to Home, New Recipe, and Recipes
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 function NavBar() {
-
-   const oldNav = <div>
-      <ul>
-        <li>
-          <NavLink
-            to='/'
-          >Home</NavLink>
-        </li>
-        <li>
-          <NavLink
-            to='/new-recipes'
-          >New Recipe</NavLink>
-        </li>
-      </ul>
-    </div>
+  const linkStyles = {
+    display: "inline-block",
+    width: "100px",
+    padding: "12px",
+    margin: "0 6px 6px",
+    background: "#78111e",
+    borderRadius: "10px",
+    textDecoration: "none",
+    color: "white",
+  };
 
   return (
     <>
-    <Navbar collapseonSelect fixed='top' bg='dark'>
-      <Container>
-        <Navbar.Toggle aria-controls='responsive-navbar-nav' />/
-        <Navbar.Collapse id='responsive-navbar-nav'>
+      <Navbar fixed='top' bg='dark' >
+        <Container>
+          {/* <Navbar.Toggle aria-controls='responsive-navbar-nav' />/
+        <Navbar.Collapse id='responsive-navbar-nav'> */}
+          {/* <Navbar.Brand to={"/"}>image</Navbar.Brand> */}
           <Nav>
-            <Nav.Link href='/'>Home</Nav.Link>
-            <Nav.Link href="/new-recipe">New Recipe</Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/"
+              style={linkStyles}
+            >Home
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to={"/new-recipe"}
+              style={linkStyles}
+            >Add Recipe
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to={"/recipes"}
+              style={linkStyles}
+            >Recipes
+            </Nav.Link>
           </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          {/* </Navbar.Collapse> */}
+        </Container>
+      </Navbar>
     </>
 
   )
