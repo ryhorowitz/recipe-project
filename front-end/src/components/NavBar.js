@@ -8,12 +8,18 @@ function NavBar() {
     display: "inline-block",
     width: "100px",
     padding: "12px",
-    margin: "0 6px 6px",
+    margin: "6px 8px",
     background: "#78111e",
     borderRadius: "10px",
     textDecoration: "none",
     color: "white",
+    textAlign: 'center',
+    borderStyle: 'ridge'
   };
+
+  const navBarStyles = {
+    margin: '5px',
+  }
 
   return (
     <>
