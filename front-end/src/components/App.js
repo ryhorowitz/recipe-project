@@ -33,6 +33,10 @@ function App() {
 
 }
 
+function handleAddRecipe() {
+  
+}
+
 const appStyles = {
   margin: '100px 50px',
   padding: '0 50px',
