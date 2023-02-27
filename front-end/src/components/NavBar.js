@@ -6,8 +6,8 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 function NavBar() {
   const linkStyles = {
     display: "inline-block",
-    width: "100px",
-    padding: "12px",
+    width: "150px",
+    padding: "10px",
     margin: "6px 8px",
     background: "#78111e",
     borderRadius: "10px",
@@ -23,7 +23,7 @@ function NavBar() {
 
   return (
     <>
-      <Navbar fixed='top' bg='dark' >
+      <Navbar fixed='top' bg='dark'>
         <Container>
           {/* <Navbar.Toggle aria-controls='responsive-navbar-nav' />/
         <Navbar.Collapse id='responsive-navbar-nav'> */}
