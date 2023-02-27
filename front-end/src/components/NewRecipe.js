@@ -7,11 +7,12 @@ function NewRecipe() {
   function handleSubmit(e) {
     e.preventDefault()
     console.log('submit')
+    // make post req
   }
   return (
 
     <Form className="rounded p-4 p-sm-3" onSubmit={handleSubmit}>
-      <Form.Group className='mb-3 w-75' controlId="formRecipeName">
+      <Form.Group className='mb-3 w-50' controlId="formRecipeName">
         <Form.Label>Name:</Form.Label>
         <Form.Control type="text" placeholder="Recipe name"></Form.Control>
       </Form.Group>

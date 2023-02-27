@@ -5,10 +5,10 @@ import RecipeCard from "./RecipeCard";
 
 function Recipes({ recipes }) {
   const recipeCards = recipes.map((recipe) => {
-    const { id, img, name } = recipe
+    const { id, img, name, link } = recipe
 
     return <Col key={id}>
-      <RecipeCard img={img} name={name} />
+      <RecipeCard img={img} name={name} link={link}/>
       </Col>
   })
   return (
