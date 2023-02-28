@@ -1,0 +1,24 @@
+{
+  "recipes": [
+    {
+      "id": 0,
+      "name": "cookies",
+      "img": "https://www.photos-public-domain.com/wp-content/uploads/2017/12/chocolate-chip-cookies.jpg"
+    },
+    {
+      "id": 1,
+      "name": "beans",
+      "img": "https://thebrilliantkitchen.com/wp-content/uploads/2022/08/How-Long-Do-Baked-Beans-Last.jpg.webp"
+    },
+    {
+      "id": 2,
+      "name": "steak",
+      "img": "https://whitneybond.com/wp-content/uploads/2021/06/steak-marinade-17.jpg"
+    },
+    {
+      "id": 3,
+      "name": "mashed potatoes",
+      "img": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/13DA79A7-5ACD-488C-9539-5D4A5AAA5CF9/Derivates/15861D6C-CA62-406A-AC34-6CC417B82E07.jpg"
+    }
+  ]
+}

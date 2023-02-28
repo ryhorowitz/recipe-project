@@ -1,8 +1,11 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import EditRecipe from "./EditRecipe";
 
-function RecipeCard({id, name, img, link, onDeleteRecipe}) {
+function RecipeCard({
+  id, name, img, link, description, onDeleteRecipe
+}) {
 
   function handleDeleteButtonClick() {
     onDeleteRecipe(id)
@@ -12,19 +15,22 @@ function RecipeCard({id, name, img, link, onDeleteRecipe}) {
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
-        <Card.Text>
-          Yum
-        </Card.Text>
+        <Card.Text>{description}</Card.Text>
         <Card.Link href={link} target="_blank">Recipe Link</Card.Link>
-        <Button 
-        variant="secondary" 
-        size="sm" 
-        style={{ float: 'right' }}
-        onClick={handleDeleteButtonClick}
-        >Delete</Button>
+        {/* <div> */}
+          <Button
+            variant="secondary"
+            size="sm"
+            style={{ float: 'right' }}
+            onClick={handleDeleteButtonClick}
+          >Delete</Button>
+          <EditRecipe />
+        {/* </div> */}
       </Card.Body>
     </Card>
   )
 }
 
 export default RecipeCard
+
+// add edit button on the card

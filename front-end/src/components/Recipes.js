@@ -5,7 +5,7 @@ import RecipeCard from "./RecipeCard";
 
 function Recipes({ recipes, onDeleteRecipe }) {
   const recipeCards = recipes.map((recipe) => {
-    const { id, img, name, link } = recipe
+    const { id, img, name, link, description } = recipe
 
     return <Col key={id}>
       <RecipeCard
@@ -13,6 +13,7 @@ function Recipes({ recipes, onDeleteRecipe }) {
         img={img}
         name={name}
         link={link}
+        description={description}
         onDeleteRecipe={onDeleteRecipe}
       />
     </Col>

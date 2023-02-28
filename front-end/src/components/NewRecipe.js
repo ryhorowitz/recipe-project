@@ -6,7 +6,8 @@ function NewRecipe({onAddRecipe}) {
   const [newRecipe, setNewRecipe] = useState({
     name: '',
     img: '',
-    link: ''
+    link: '',
+    description: ''
   })
 
   return (
@@ -15,10 +16,22 @@ function NewRecipe({onAddRecipe}) {
       <Form.Group className='mb-3 w-50' controlId="name">
         <Form.Label>Name:</Form.Label>
         <Form.Control
+          size="lg"
           type="text"
           placeholder="Recipe name"
           defaultValue={newRecipe.name}
           onChange={handleUpdateForm}
+        ></Form.Control>
+      </Form.Group>
+
+      <Form.Group className="mb-4 w-75" controlId="description">
+        <Form.Label>Description</Form.Label>
+        <Form.Control
+          as="textarea"
+          placeholder="Tell me about it!"
+          defaultValue={newRecipe.description}
+          onChange={handleUpdateForm}
+          style={{height: '20vh'}}
         ></Form.Control>
       </Form.Group>
 

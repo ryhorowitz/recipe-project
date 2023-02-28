@@ -1,0 +1,32 @@
+{
+  "recipes": [
+    {
+      "id": 0,
+      "name": "Chocolate Chip Cookies",
+      "img": "https://www.photos-public-domain.com/wp-content/uploads/2017/12/chocolate-chip-cookies.jpg",
+      "link": "https://docs.google.com/document/d/e/2PACX-1vR71B8JCA3upIBihTaQ9t_0XmVRAABFtpmAADDhXVnAXsGSS0DsSxLiAPhBw8HP5FCeQ654sFVoap4z/pub",
+      "description": "Yummy gooey cookies"
+    },
+    {
+      "id": 1,
+      "name": "Baked Beans",
+      "img": "https://thebrilliantkitchen.com/wp-content/uploads/2022/08/How-Long-Do-Baked-Beans-Last.jpg.webp",
+      "link": "https://www.allrecipes.com/recipe/21655/simple-baked-beans/",
+      "description": "The more you eat..."
+    },
+    {
+      "id": 2,
+      "name": "Ribeye Steak",
+      "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flive.staticflickr.com%2F3769%2F10014934545_fa7b01185e_n.jpg&f=1&nofb=1&ipt=cb1ff6a1a9f349222d2c5b0e34d0ec18af0d10d8b1a56f637acbbd5a4a6e4f9c&ipo=images",
+      "link": "https://www.allrecipes.com/recipe/239414/salt-and-pepper-ribeye-steak/",
+      "description": "Hefty, rich beef"
+    },
+    {
+      "id": 3,
+      "name": "Mashed Potatoes",
+      "img": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/13DA79A7-5ACD-488C-9539-5D4A5AAA5CF9/Derivates/15861D6C-CA62-406A-AC34-6CC417B82E07.jpg",
+      "link": "https://www.allrecipes.com/article/how-to-make-mashed-potatoes/",
+      "description": "Classic side dish"
+    }
+  ]
+}
