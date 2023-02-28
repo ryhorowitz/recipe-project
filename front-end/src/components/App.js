@@ -11,7 +11,7 @@ const recipesUrl = 'http://localhost:3000/recipes'
 function App() {
   const [recipes, setRecipes] = useState([])
 
-  useEffect( () => {
+  useEffect(() => {
     fetch(recipesUrl)
       .then(r => r.json())
       .then(recipes => setRecipes(recipes))
@@ -24,31 +24,32 @@ function App() {
       <main style={mainContainer}>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/new-recipe' element={<NewRecipe onAddRecipe={handleAddRecipe}/>} />
-          <Route path='/recipes' element={<Recipes recipes={recipes}
-          />} />
+          <Route path='/new-recipe' element={<NewRecipe onAddRecipe={handleAddRecipe} />} />
+          <Route path='/recipes' element={<Recipes recipes={recipes} />} />
         </Routes>
       </main>
     </div>
   );
+  function handleAddRecipe(recipe) {
 
-}
+    const postOptions = {
+      'method': 'POST',
+      'headers': {
+        'Content-Type': 'application/json'
+      },
+      'body': JSON.stringify(recipe)
+    }
 
-function handleAddRecipe(recipe) {
-
-  const postOptions = {
-    'method': 'POST',
-    'headers': {
-      'Content-Type': 'application/json'
-    },
-    'body': JSON.stringify(recipe)
+    fetch(recipesUrl, postOptions)
+      .then(r => r.json())
+      .then(data => { console.log(data)
+      setRecipes([...recipes, data])
+      })
+      .catch(err => console.error(err))
   }
-
-  fetch(recipesUrl, postOptions)
-    .then( r => r.json())
-    .then( data => console.log(data))
-    .catch ( err => console.error(err))
 }
+
+
 
 const appStyles = {
   margin: '100px 50px',
