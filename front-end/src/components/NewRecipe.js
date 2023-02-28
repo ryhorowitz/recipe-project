@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, FormGroup } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form"
 
 function NewRecipe({onAddRecipe}) {
@@ -48,7 +48,6 @@ function NewRecipe({onAddRecipe}) {
   )
 
   function handleUpdateForm(e) {
-    console.log(e.target.id)
     setNewRecipe({
       ...newRecipe,
       [e.target.id]: e.target.value
@@ -58,10 +57,7 @@ function NewRecipe({onAddRecipe}) {
   function handleSubmit(e) {
     e.preventDefault()
     console.log('submit')
-    //make post req with new recipe
     onAddRecipe(newRecipe)
-    //then clear newRecipe values
-    // navigate to Recipes page
   }
 }
 export default NewRecipe
