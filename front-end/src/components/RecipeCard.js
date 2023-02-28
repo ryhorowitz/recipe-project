@@ -15,7 +15,7 @@ function RecipeCard({id, name, img, link, onDeleteRecipe}) {
         <Card.Text>
           Yum
         </Card.Text>
-        <Card.Link href={link}>Recipe Link</Card.Link>
+        <Card.Link href={link} target="_blank">Recipe Link</Card.Link>
         <Button 
         variant="secondary" 
         size="sm" 

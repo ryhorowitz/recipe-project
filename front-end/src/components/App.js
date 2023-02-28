@@ -70,9 +70,8 @@ function App() {
   }
 
   function handleDeleteRecipe(id) {
-    //make a delete req to url + id
-    //filter out the deleted item
     const updatedRecipes = recipes.filter(recipe => recipe.id !== id)
+
     fetch(`${recipesUrl}/${id}`, { 'method': 'DELETE' })
       .then(r => r.json())
       .then(data => { setRecipes(updatedRecipes) })
