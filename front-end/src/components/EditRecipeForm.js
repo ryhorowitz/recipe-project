@@ -45,7 +45,7 @@ function EditRecipeForm({ recipe, onAddRecipe}) {
         ></Form.Control>
       </Form.Group>
 
-      <Form.Group className="mb-4" controlId="link">
+      <Form.Group className="mb-1" controlId="link">
         <Form.Label>Link to recipe</Form.Label>
         <Form.Control
           type='url'
@@ -55,9 +55,6 @@ function EditRecipeForm({ recipe, onAddRecipe}) {
           onChange={handleUpdateForm}
         ></Form.Control>
       </Form.Group>
-      <Button variant="primary" type="submit" >
-        Submit
-      </Button>
     </Form>
   )
 
