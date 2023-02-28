@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, FormGroup } from "react-bootstrap";
 import Form from "react-bootstrap/Form"
 
-function NewRecipe() {
+function NewRecipe({onAddRecipe}) {
   const [newRecipe, setNewRecipe] = useState({
     name: '',
     img: '',
@@ -58,7 +58,10 @@ function NewRecipe() {
   function handleSubmit(e) {
     e.preventDefault()
     console.log('submit')
-    // make post req
+    //make post req with new recipe
+    onAddRecipe(newRecipe)
+    //then clear newRecipe values
+    // navigate to Recipes page
   }
 }
 export default NewRecipe

@@ -24,8 +24,9 @@ function App() {
       <main style={mainContainer}>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/new-recipe' element={<NewRecipe />} />
-          <Route path='/recipes' element={<Recipes recipes={recipes}/>} />
+          <Route path='/new-recipe' element={<NewRecipe onAddRecipe={handleAddRecipe}/>} />
+          <Route path='/recipes' element={<Recipes recipes={recipes}
+          />} />
         </Routes>
       </main>
     </div>
@@ -33,8 +34,20 @@ function App() {
 
 }
 
-function handleAddRecipe() {
-  
+function handleAddRecipe(recipe) {
+
+  const postOptions = {
+    'method': 'POST',
+    'headers': {
+      'Content-Type': 'application/json'
+    },
+    'body': JSON.stringify(recipe)
+  }
+
+  fetch(recipesUrl, postOptions)
+    .then( r => r.json())
+    .then( data => console.log(data))
+    .catch ( err => console.error(err))
 }
 
 const appStyles = {
