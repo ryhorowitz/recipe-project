@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import EditRecipeForm from './EditRecipeForm';
 
-function EditRecipe({ id, name, image, link }) {
+function EditRecipe({ recipe }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -30,7 +30,7 @@ function EditRecipe({ id, name, image, link }) {
           <Modal.Title>Edit Recipe</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <EditRecipeForm />
+          <EditRecipeForm recipe={recipe}/>
         </Modal.Body> 
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

@@ -4,10 +4,10 @@ import Form from "react-bootstrap/Form"
 
 function EditRecipeForm({ recipe, onAddRecipe}) {
   const [editRecipe, setEditRecipe] = useState({
-    name: '',
-    img: '',
-    link: '',
-    description: ''
+    name: recipe.name,
+    img: recipe.img,
+    link: recipe.link,
+    description: recipe.description
   })
 
   return (

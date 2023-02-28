@@ -3,10 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import EditRecipe from "./EditRecipe";
 
-function RecipeCard({
-  id, name, img, link, description, onDeleteRecipe
-}) {
-
+function RecipeCard({recipe, onDeleteRecipe}) {
+  const {id, name, img, description, link} = recipe
   function handleDeleteButtonClick() {
     onDeleteRecipe(id)
   }
@@ -24,12 +22,7 @@ function RecipeCard({
           style={{ float: 'right' }}
           onClick={handleDeleteButtonClick}
         >Delete</Button>
-        <EditRecipe 
-          id={id}
-          name={name}
-          img={img}
-          link={link}
-          description={description} />
+        <EditRecipe recipe={recipe} />
         {/* </div> */}
       </Card.Body>
     </Card>
