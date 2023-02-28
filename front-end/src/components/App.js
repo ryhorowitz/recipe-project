@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { createBrowserRouter, Route, Routes } from "react-router-dom"
+import { createBrowserRouter, Route, Routes, useNavigate } from "react-router-dom"
 import Home from "./Home"
 import NaviBar from "./NavBar";
 import NewRecipe from "./NewRecipe";
@@ -10,6 +10,8 @@ const recipesUrl = 'http://localhost:3000/recipes'
 
 function App() {
   const [recipes, setRecipes] = useState([])
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch(recipesUrl)
@@ -30,6 +32,7 @@ function App() {
       </main>
     </div>
   );
+
   function handleAddRecipe(recipe) {
 
     const postOptions = {
@@ -42,8 +45,12 @@ function App() {
 
     fetch(recipesUrl, postOptions)
       .then(r => r.json())
-      .then(data => { console.log(data)
-      setRecipes([...recipes, data])
+      .then(data => {
+        console.log(data)
+        setRecipes([...recipes, data])
+      })
+      .then(() => {
+        navigate('/recipes')
       })
       .catch(err => console.error(err))
   }
