@@ -18,13 +18,18 @@ function RecipeCard({
         <Card.Text>{description}</Card.Text>
         <Card.Link href={link} target="_blank">Recipe Link</Card.Link>
         {/* <div> */}
-          <Button
-            variant="secondary"
-            size="sm"
-            style={{ float: 'right' }}
-            onClick={handleDeleteButtonClick}
-          >Delete</Button>
-          <EditRecipe />
+        <Button
+          variant="secondary"
+          size="sm"
+          style={{ float: 'right' }}
+          onClick={handleDeleteButtonClick}
+        >Delete</Button>
+        <EditRecipe 
+          id={id}
+          name={name}
+          img={img}
+          link={link}
+          description={description} />
         {/* </div> */}
       </Card.Body>
     </Card>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import NewRecipe from './NewRecipe';
+import EditRecipeForm from './EditRecipeForm';
 
-function EditRecipe() {
+function EditRecipe({ id, name, image, link }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -30,9 +30,7 @@ function EditRecipe() {
           <Modal.Title>Edit Recipe</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          I will not close if you click outside me. Don't even try to press
-          escape key.
-          <NewRecipe />
+          <EditRecipeForm />
         </Modal.Body> 
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
