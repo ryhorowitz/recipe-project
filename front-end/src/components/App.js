@@ -25,9 +25,23 @@ function App() {
       <NaviBar />
       <main style={mainContainer}>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/new-recipe' element={<NewRecipe onAddRecipe={handleAddRecipe} />} />
-          <Route path='/recipes' element={<Recipes recipes={recipes} />} />
+          <Route
+            path='/'
+            element={<Home />}
+          />
+          <Route
+            path='/new-recipe'
+            element={
+              <NewRecipe
+                onAddRecipe={handleAddRecipe} />}
+          />
+          <Route
+            path='/recipes'
+            element={
+              <Recipes
+                recipes={recipes}
+                onDeleteRecipe={handleDeleteRecipe} />}
+          />
         </Routes>
       </main>
     </div>
@@ -56,6 +70,13 @@ function App() {
   }
 }
 
+function handleDeleteRecipe(id) {
+  //make a delete req to url + id
+  fetch(`${recipesUrl}/${id}`, { 'method': 'DELETE' })
+  .then( r => r.json())
+  .then( data => console.log(data))
+  .catch( err => console.error(err))
+}
 
 
 const appStyles = {
