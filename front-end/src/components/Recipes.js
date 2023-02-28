@@ -3,11 +3,12 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import RecipeCard from "./RecipeCard";
 
-function Recipes({ recipes, onDeleteRecipe }) {
+function Recipes({ recipes, onDeleteRecipe, url }) {
   const recipeCards = recipes.map((recipe) => {
 
     return <Col key={recipe.id}>
       <RecipeCard
+        url={url}
         id={recipe.id}
         recipe={recipe}
         onDeleteRecipe={onDeleteRecipe}

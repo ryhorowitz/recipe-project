@@ -39,6 +39,7 @@ function App() {
             path='/recipes'
             element={
               <Recipes
+                url={recipesUrl}
                 recipes={recipes}
                 onDeleteRecipe={handleDeleteRecipe} />}
           />
