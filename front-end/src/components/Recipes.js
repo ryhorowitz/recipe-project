@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import RecipeCard from "./RecipeCard";
 
-function Recipes({ recipes, onDeleteRecipe, url }) {
+function Recipes({ recipes, onDeleteRecipe, url, onEditRecipe }) {
   const recipeCards = recipes.map((recipe) => {
 
     return <Col key={recipe.id}>
@@ -12,6 +12,7 @@ function Recipes({ recipes, onDeleteRecipe, url }) {
         id={recipe.id}
         recipe={recipe}
         onDeleteRecipe={onDeleteRecipe}
+        onEditRecipe={onEditRecipe}
       />
     </Col>
   })

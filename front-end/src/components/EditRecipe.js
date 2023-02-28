@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import EditRecipeForm from './EditRecipeForm';
 
-function EditRecipe({ recipe, url }) {
+function EditRecipe({ recipe, url, onEditRecipe }) {
   const [show, setShow] = useState(false);
   const [editRecipe, setEditRecipe] = useState({
     name: recipe.name,
@@ -36,10 +36,10 @@ function EditRecipe({ recipe, url }) {
           <Modal.Title>Edit Recipe</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <EditRecipeForm 
-          recipe={recipe} 
-          editRecipe={editRecipe}
-          setEditRecipe={setEditRecipe}
+          <EditRecipeForm
+            recipe={recipe}
+            editRecipe={editRecipe}
+            setEditRecipe={setEditRecipe}
           />
         </Modal.Body>
         <Modal.Footer>
@@ -61,9 +61,15 @@ function EditRecipe({ recipe, url }) {
         'Content-type': 'application/json'
       }
     })
-    .then( r => r.json())
-    .then( data => console.log(data))
-    .catch( err => console.error(err))
+      .then(r => r.json())
+      .then(edittedRecipe => {
+        console.log(edittedRecipe)
+        //update state to match newly edited name
+        onEditRecipe(edittedRecipe)
+        
+      })
+      .then( () => handleClose())
+      .catch(err => console.error(err))
   }
 }
-  export default EditRecipe
+export default EditRecipe

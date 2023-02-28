@@ -41,7 +41,8 @@ function App() {
               <Recipes
                 url={recipesUrl}
                 recipes={recipes}
-                onDeleteRecipe={handleDeleteRecipe} />}
+                onDeleteRecipe={handleDeleteRecipe}
+                onEditRecipe={handleEditRecipe} />}
           />
         </Routes>
       </main>
@@ -77,6 +78,18 @@ function App() {
       .then(r => r.json())
       .then(data => { setRecipes(updatedRecipes) })
       .catch(err => console.error(err))
+  }
+
+  function handleEditRecipe(edittedRecipe) {
+    const updatedRecipes = recipes.map(recipe => {
+      if (recipe.id === edittedRecipe.id) {
+        // update with response obj from server
+        return edittedRecipe
+      }
+      return recipe
+    })
+    console.log('updatted', updatedRecipes)
+    setRecipes(updatedRecipes)
   }
 }
 
