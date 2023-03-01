@@ -21,9 +21,9 @@ function App() {
   }, [])
 
   return (
-    <div className="App" style={appStyles}>
+    <>
       <NaviBar />
-      <main style={mainContainer}>
+      <main className="px-3 bg-secondary">
         <Routes>
           <Route
             path='/'
@@ -46,7 +46,7 @@ function App() {
           />
         </Routes>
       </main>
-    </div>
+    </>
   );
 
   function handleAddRecipe(recipe) {
@@ -93,18 +93,4 @@ function App() {
   }
 }
 
-
-
-
-const appStyles = {
-  margin: '100px 50px',
-  padding: '0 50px',
-  background: '#DCE775'
-
-}
-
-const mainContainer = {
-  margin: '10px',
-  padding: '50px',
-}
 export default App;

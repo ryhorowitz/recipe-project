@@ -4,45 +4,36 @@ import { NavLink, Link } from "react-router-dom";
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 function NavBar() {
-  const linkStyles = {
-    display: "inline-block",
-    width: "150px",
-    padding: "10px",
-    margin: "6px 8px",
-    background: "#78111e",
-    borderRadius: "10px",
-    textDecoration: "none",
-    color: "white",
-    textAlign: 'center',
-    borderStyle: 'ridge'
-  };
 
   return (
     <>
-      <Navbar fixed='top' bg='dark'>
+      <Navbar bg="dark" variant="dark">
         <Container>
-          <Nav>
+          <Navbar.Brand
+            as={Link}
+            to="/"
+          >Recipe Book
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Nav className="me-auto">
             <Nav.Link
               as={Link}
               to="/"
-              style={linkStyles}
             >Home
             </Nav.Link>
             <Nav.Link
               as={Link}
               to={"/new-recipe"}
-              style={linkStyles}
             >Add Recipe
             </Nav.Link>
             <Nav.Link
               as={Link}
               to={"/recipes"}
-              style={linkStyles}
             >Recipes
             </Nav.Link>
           </Nav>
-          {/* </Navbar.Collapse> */}
         </Container>
+        {/* </Navbar.Collapse> */}
       </Navbar>
     </>
 
