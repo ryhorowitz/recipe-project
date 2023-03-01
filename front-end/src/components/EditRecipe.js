@@ -53,7 +53,7 @@ function EditRecipe({ recipe, url, onEditRecipe }) {
   );
 
   function handleEditSubmisson() {
-    // console.log(editRecipe)
+    
     fetch(`${url}/${recipe.id}`, {
       method: 'PATCH',
       body: JSON.stringify(editRecipe),
@@ -62,13 +62,8 @@ function EditRecipe({ recipe, url, onEditRecipe }) {
       }
     })
       .then(r => r.json())
-      .then(edittedRecipe => {
-        console.log(edittedRecipe)
-        //update state to match newly edited name
-        onEditRecipe(edittedRecipe)
-        
-      })
-      .then( () => handleClose())
+      .then(edittedRecipe => onEditRecipe(edittedRecipe))
+      .then(() => handleClose())
       .catch(err => console.error(err))
   }
 }

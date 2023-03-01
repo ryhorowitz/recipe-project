@@ -17,17 +17,10 @@ function NavBar() {
     borderStyle: 'ridge'
   };
 
-  const navBarStyles = {
-    margin: '5px',
-  }
-
   return (
     <>
       <Navbar fixed='top' bg='dark'>
         <Container>
-          {/* <Navbar.Toggle aria-controls='responsive-navbar-nav' />/
-        <Navbar.Collapse id='responsive-navbar-nav'> */}
-          {/* <Navbar.Brand to={"/"}>image</Navbar.Brand> */}
           <Nav>
             <Nav.Link
               as={Link}
