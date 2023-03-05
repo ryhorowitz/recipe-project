@@ -5,9 +5,11 @@ import EditRecipe from "./EditRecipe";
 
 function RecipeCard({recipe, url, onDeleteRecipe, onEditRecipe}) {
   const {id, name, img, description, link} = recipe
+  
   function handleDeleteButtonClick() {
     onDeleteRecipe(id)
   }
+ 
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={img} />

@@ -27,6 +27,13 @@
       "img": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/13DA79A7-5ACD-488C-9539-5D4A5AAA5CF9/Derivates/15861D6C-CA62-406A-AC34-6CC417B82E07.jpg",
       "link": "https://www.allrecipes.com/article/how-to-make-mashed-potatoes/",
       "description": "Classic side dish"
+    },
+    {
+      "name": "Jambalaya",
+      "img": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F-cLclCE9LTFY%2FUlWX-_XvR2I%2FAAAAAAAAHIM%2FvIqIGPuqNWk%2Fs1600%2Fchicken%2Bjambalaya4.JPG&f=1&nofb=1&ipt=219a5e175a9cff85d5d942d8efd871b73d35ca75de8bf6b39d7d49151b8b5a22&ipo=images",
+      "link": "https://www.delish.com/cooking/recipe-ideas/a53820/easy-homemade-cajun-jambalaya-recipe/",
+      "description": "It's good",
+      "id": 4
     }
   ]
 }

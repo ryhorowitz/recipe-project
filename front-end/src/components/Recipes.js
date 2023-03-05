@@ -6,7 +6,10 @@ import RecipeCard from "./RecipeCard";
 function Recipes({ recipes, onDeleteRecipe, url, onEditRecipe }) {
   const recipeCards = recipes.map((recipe) => {
 
-    return <Col key={recipe.id}>
+    return <Col
+      style={{ display: "flex", justifyContent: "center" }}
+      key={recipe.id}
+    >
       <RecipeCard
         url={url}
         id={recipe.id}
@@ -17,12 +20,12 @@ function Recipes({ recipes, onDeleteRecipe, url, onEditRecipe }) {
     </Col>
   })
   return (
-    <>
-      <h1 className="mb-4">RECIPES</h1>
+    <div className="pb-5">
+      <h1 className="mb-4 ">RECIPES</h1>
       <Row md={2} xl={3} className='g-4'>
         {recipeCards}
       </Row>
-    </>
+    </div>
   )
 }
 
