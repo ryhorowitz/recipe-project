@@ -28,5 +28,5 @@ json-server db.json --watch
 5. In a separate terminal cd into the projects front-end folder and run
 
 ```shell
-npm start
+npm run start
 ```
